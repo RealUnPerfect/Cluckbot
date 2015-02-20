@@ -1,0 +1,92 @@
+#realunperfect
+
+on @*:TEXT:!bot:#realunperfect: {
+  if ($nick isop #realunperfect) {
+    if ((%floodbotrealunperfect) || ($($+(%,floodbotrealunperfect.,$nick),2))) { return }
+    set -u10 %floodbotrealunperfect On
+    set -u30 %floodbotrealunperfect. $+ $nick On
+  msg $chan /me ist der EINZIGE Bot in diesem Channel BORT }
+  else { msg $chan Sorry $nick - Dieser Befehl ist nur für Moderatoren. }    
+}
+on @*:TEXT:!test:#realunperfect: {
+  if ($nick isop #realunperfect) {
+    if ((%floodtestrealunperfect) || ($($+(%,floodtestrealunperfect.,$nick),2))) { return }
+    set -u10 %floodtestrealunperfect On
+    set -u30 %floodtestrealunperfect. $+ $nick On
+  msg $chan /me ist im Channel und 'funktioniert' Kappa }
+  else { msg $chan Sorry $nick - Aber ich funktioniere wirklich. }    
+}
+on @*:TEXT:!info:#realunperfect:{
+  if ((%floodinforealunperfect) || ($($+(%,floodinforealunperfect.,$nick),2))) { return }
+  set -u10 %floodinforealunperfect On
+  set -u30 %floodinforealunperfect. $+ $nick On
+  msg $chan Thomas ist 18 und geht in die 12. Klasse.
+}
+on @*:TEXT:!links:#realunperfect: {
+  if ((%floodlinksrealunperfect) || ($($+(%,floodlinksrealunperfect.,$nick),2))) { return }
+  set -u10 %floodlinksrealunperfect On
+  set -u30 %floodlinksrealunperfect. $+ $nick On
+  msg $chan Links: Twitter: twitter.com/realunperfect ; Youtube: youtube.com/realunperfect  
+}
+on @*:TEXT:!specs:#realunperfect: {
+  if ((%floodspecsrealunperfect) || ($($+(%,floodspecsrealunperfect.,$nick),2))) { return }
+  set -u10 %floodspecsrealunperfect On
+  set -u30 %floodspecsrealunperfect. $+ $nick On
+  msg $chan Specs: i5-4670K @4Ghz - GTX 770 OC - 16GB Ram - SSD : 120GB OS + 250GB Programme/Spiele + 2TB HDD's - Windows 8.1
+}
+on @*:TEXT:!ag:#realunperfect: {
+  if ((%floodagrealunperfect) || ($($+(%,floodagrealunperfect.,$nick),2))) { return }
+  set -u10 %floodagrealunperfect On
+  set -u30 %floodagrealunperfect. $+ $nick On
+  msg $chan Ihr könnt Agrarian Skies: Hardcore Quest im FTB-Launcher downloaden ( feed-the-beast.com/launcher ).
+}
+on @*:TEXT:!madpack:#realunperfect: {
+  if ((%floodmadpackrealunperfect) || ($($+(%,floodmadpackrealunperfect.,$nick),2))) { return }
+  set -u10 %floodmadpackrealunperfect On
+  set -u30 %floodmadpackrealunperfect. $+ $nick On
+  msg $chan Ihr könnt das Madpack im ATLauncher finden ( atlauncher.com ) - Wir spielen die Version 1.5.1
+}
+on @*:TEXT:!regeln:#realunperfect: {
+  if ((%floodregelnrealunperfect) || ($($+(%,floodregelnrealunperfect.,$nick),2))) { return }
+  set -u10 %floodregelnrealunperfect On
+  set -u30 %floodregelnrealunperfect. $+ $nick On
+  msg $chan Hier ist sogut wie 'alles' erlaubt - die Regeln unter dem Stream gelten immer genau wie die Terms of Service.
+}
+
+#derp
+on *:text:!derp:#realunperfect:
+if ($nick isop #realunperfect) {
+  inc %derprealunperfect.times
+  msg $chan $nick -> Thomas hat %derprealunperfect.times Mal rumgederped FailFish
+}
+
+#linkblock
+on *:text:*:#realunperfect:{
+  if ($nick isop #realunperfect) return
+  if (.com isin $1-) || (.uk isin $1-) || (.com isin $1-)  || (.tv isin $1-) || (www. isin $1-) || (.ly isin $1-) || (http:// isin $1-) || (.ca isin $1-) || (.edu isin $1-) || (.mil isin $1-) || (.net isin $1-) || (.org isin $1-) || (.de isin $1-) || (.us isin $1-) {
+    Msg #realunperfect $nick -> Bitte keine Links! Wenn es etwas wichtiges ist, dann schick mir den Link + eine Beschreibung als Nachricht.
+    Msg #realunperfect .timeout $nick 1
+  }
+}
+#capsblock
+ON @*:TEXT:*:#realunperfect: {
+  IF (($len($1-) < 10) || ($nick isop #realunperfect)) { RETURN }
+  VAR %text = $strip($remove($1-,$chr(32)))
+  VAR %non.caps = $len($removecs(%text,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z))
+  VAR %full.line = $len($strip($remove(%text,$chr(32))))
+  VAR %percent = $calc(1 - (%non.caps / %full.line))
+  IF (%percent >= 0.8) {
+    msg # /timeout $nick 1 | msg #realunperfect Keine CAPS! Danke.
+  }
+}
+
+
+#testbereich
+on *:TEXT:*:#realunperfect:{
+  inc -u20 %spam. [ $+ [ $nick ] ]
+  if (%spam. [ $+ [ $nick ] ] == 3) {
+    Msg #realunperfect $nick -> Schluss mit dem gespamme! 30 Sekunden Pause für dich.
+    Msg #realunperfect .timeout $nick 30
+  }
+}
+#

@@ -1,0 +1,110 @@
+#feldjaeger666
+
+on @*:TEXT:!bot:#feldjaeger666: {
+  if ($nick isop #feldjaeger666) {
+    if ((%floodbotfeldjaeger666) || ($($+(%,floodbotfeldjaeger666.,$nick),2))) { return }
+    set -u10 %floodbotfeldjaeger666 On
+    set -u30 %floodbotfeldjaeger666. $+ $nick On
+  msg $chan /me is the ONLY bot in this channel BORT }
+  else { msg $chan Sorry $nick - Only for mods. }    
+}
+on @*:TEXT:!art:#feldjaeger666:{
+  if ((%floodartfeldjaeger666) || ($($+(%,floodartfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodartfeldjaeger666 On
+  set -u30 %floodartfeldjaeger666. $+ $nick On
+  msg $chan Wanna see all the art Feldi drew so far? just go to http://feldiarts.deviantart.com
+}
+on @*:TEXT:!followernew:#feldjaeger666:{
+  if ((%floodfollowernewfeldjaeger666) || ($($+(%,floodfollowernewfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodfollowernewfeldjaeger666 On
+  set -u30 %floodfollowernewfeldjaeger666. $+ $nick On
+  msg $chan ? ? ?_? ?? Praise the Followers ? ? ?_? ??
+}
+on @*:TEXT:!lucky:#feldjaeger666: {
+  if ((%floodluckyfeldjaeger666) || ($($+(%,floodluckyfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodluckyfeldjaeger666 On
+  set -u30 %floodluckyfeldjaeger666. $+ $nick On
+  msg $chan Didn't follow yet? when you hit that Followbutton while Feldi is Playing Minecraft she will spawn in a Luckyblock just for you <3
+}
+on @*:TEXT:!mod:#feldjaeger666: {
+  if ((%floodmodfeldjaeger666) || ($($+(%,floodmodfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodmodfeldjaeger666 On
+  set -u30 %floodmodfeldjaeger666. $+ $nick On
+  msg $chan If you ask for beeing mod you can expect not to get one. Feldi is adding mods when she knows that she can trust people.
+}
+on @*:TEXT:!ping:#feldjaeger666: {
+  if ((%floodpingfeldjaeger666) || ($($+(%,floodpingfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodpingfeldjaeger666 On
+  set -u30 %floodpingfeldjaeger666. $+ $nick On
+  msg $chan pong.
+}
+on @*:TEXT:!share:#feldjaeger666: {
+  if ((%floodsharefeldjaeger666) || ($($+(%,floodsharefeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodsharefeldjaeger666 On
+  set -u30 %floodsharefeldjaeger666. $+ $nick On
+  msg $chan If you want to support my Stream please feel free to share it everywhere you like. A bigger community is a more fun community ^____^
+}
+on @*:TEXT:!social:#feldjaeger666: {
+  if ((%floodsocialfeldjaeger666) || ($($+(%,floodsocialfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodsocialfeldjaeger666 On
+  set -u30 %floodsocialfeldjaeger666. $+ $nick On
+  msg $chan If you wanna follow me on any socialplatform you can click one or more of the following links: Deviantart http://feldiarts.deviantart.com/ Tumblr http://feldiarts.tumblr.com/ Twitter https://twitter.com/Feldiarts or Facebook http://on.fb.me/1l1kiq5
+}
+on @*:TEXT:!specialoffer:#feldjaeger666: {
+  if ((%floodspecialofferfeldjaeger666) || ($($+(%,floodspecialofferfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodspecialofferfeldjaeger666 On
+  set -u30 %floodspecialofferfeldjaeger666. $+ $nick On
+  msg $chan SPECIAL OFFER ONLY TODAY: Buying an handmade drawn complete avatar drawing by FeldiArts and save 10% discount!Go to store: http://goo.gl/zhj2Os
+}
+on @*:TEXT:!switchto:#feldjaeger666: {
+  if ((%floodswitchtofeldjaeger666) || ($($+(%,floodswitchtofeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodswitchtofeldjaeger666 On
+  set -u30 %floodswitchtofeldjaeger666. $+ $nick On
+  msg $chan If you want to support me and the Vidcell team please got to this site and watch the Stream on it: http://www.vidcell.com/ .There are also links for purchasing my work and for donating.
+}
+on @*:TEXT:!test:#feldjaeger666: {
+  if ((%floodtestfeldjaeger666) || ($($+(%,floodtestfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodtestfeldjaeger666 On
+  set -u30 %floodtestfeldjaeger666. $+ $nick On
+  msg $chan TEST OF FREAKING DOOM and stuff
+}
+on @*:TEXT:!rules:#feldjaeger666: {
+  if ((%floodrulesfeldjaeger666) || ($($+(%,floodrulesfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodrulesfeldjaeger666 On
+  set -u30 %floodrulesfeldjaeger666. $+ $nick On
+  msg $chan Be as respectfull to other chatters as you want to be treated. Spamming the same sentence/words over and over doesn't make me note you more. Watch your Capslock. Links are for Mods only
+}
+on @*:TEXT:!commands:#feldjaeger666: {
+  if ((%floodcommandsfeldjaeger666) || ($($+(%,floodcommandsfeldjaeger666.,$nick),2))) { return }
+  set -u10 %floodcommandsfeldjaeger666 On
+  set -u30 %floodcommandsfeldjaeger666. $+ $nick On
+  msg $chan The commands for this channel are:!art;!followernew;!lucky;!mod;!ping;!share:!social;!specialoffer;!switchto;!test;!rules
+}
+
+#derp
+on *:text:!derp:#feldjaeger666: 
+if ($nick isop #feldjaeger666) {
+  inc %derpfeldjaeger666.times
+  msg $chan $nick -> Feldi derped %derpfeldjaeger666.times times FailFish
+}
+
+#linkblock
+on *:text:*:#feldjaeger666:{
+  if ($nick isop #feldjaeger666) return
+  if (.com isin $1-) || (.uk isin $1-) || (.com isin $1-)  || (.tv isin $1-) || (www. isin $1-) || (.ly isin $1-) || (http:// isin $1-) || (.ca isin $1-) || (.edu isin $1-) || (.mil isin $1-) || (.net isin $1-) || (.org isin $1-) || (.de isin $1-) || (.us isin $1-) {
+    Msg #feldjaeger666 $nick -> You're not allowed to post links.
+    Msg #feldjaeger666 .timeout $nick 1
+  }
+}
+
+#capsblock
+ON @*:TEXT:*:#feldjaeger666: {
+  IF (($len($1-) < 10) || ($nick isop #realunperfect)) { RETURN }
+  VAR %text = $strip($remove($1-,$chr(32)))
+  VAR %non.caps = $len($removecs(%text,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z))
+  VAR %full.line = $len($strip($remove(%text,$chr(32))))
+  VAR %percent = $calc(1 - (%non.caps / %full.line))
+  IF (%percent >= 0.8) {
+    msg # /timeout $nick 1 | msg #feldjaeger666 No CAPS! Thanks.
+  }
+}
